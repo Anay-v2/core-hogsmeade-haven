@@ -161,9 +161,10 @@ function loadCart() {
 <template>
 	<header>
 		<Navbar :signedin="signedIn" :picurl="picURL" />
+		<div class="indicator absolute top-4" :class="{'right-20': signedIn, 'right-36': !signedIn}">
+		<span class="indicator-item badge badge-secondary" :class="{hidden: cart.items.length === 0}">{{ cart.items.length }}</span>
 		<details
-			class="dropdown dropdown-bottom dropdown-end absolute top-4"
-			:class="{'right-20': signedIn, 'right-36': !signedIn}"
+			class="dropdown dropdown-bottom dropdown-end"
 		>
 			<summary class="btn btn-sm">
 				<svg
@@ -224,6 +225,7 @@ function loadCart() {
 				<li v-if="cart.items.length === 0">Your cart is empty.</li>
 			</ul>
 		</details>
+	</div>
 		<div
 			role="alert"
 			class="alert"

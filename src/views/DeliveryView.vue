@@ -44,7 +44,7 @@ function getData() {
 					house.value = snapshot.val().house || ''
 					option.value = snapshot.val().option || ''
 					deliveries.value = parseDeliveries(
-						JSON.parse(snapshot.val().current) || {},
+						JSON.parse(snapshot.val().current || '[]'),
 					)
 				}
 			},

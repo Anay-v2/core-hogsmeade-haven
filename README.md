@@ -16,11 +16,12 @@ This is a project made for CORE (the tech club of DPS Dwarka) inductions.
 
 ### Running
 
-Dev Server: ```
+Dev Server: 
+```
 $ bun run dev
+```
 
-````
-
-Build: ```
+Build: 
+```
 $ bun run build
 ````
